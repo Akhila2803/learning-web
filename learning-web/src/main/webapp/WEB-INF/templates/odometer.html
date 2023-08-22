@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Odometer</title>
+</head>
+<body>
+    <h1>Odometer</h1>
+    <p>Current Reading: <span th:text="${reading}">0</span></p>
+    <form method="post" action="/odometer">
+        <input type="number" id="currentReading" name="currentReading" th:value="${reading}" required>
+        <button type="submit" name="getPreviousReading">Previous</button>
+        <button type="submit" name="getNextReading">Next</button>
+    </form>
+</body>
+</html>
+
